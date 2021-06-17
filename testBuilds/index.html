@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Insider: Music Industry Global Database</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <div class="columns m-1"> <!-- все колонки разом -->
+      <div class="column is-narrow" style="width: 320px;"> <!-- первая колонка шириной в 3/12 всего окна -->
+        <div class="box"> <!-- бокс с поиском -->
+          <input class="input is-primary" type="text" name="" placeholder="Поиск юнита по названию">
+        </div>
+
+        <div class="box"> <!-- сюда пока что в textarea выводится базовая информация о юните -->
+          <h1 class="title is-6">Данные юнита:</h1>
+          <div class="control">
+          <!--  <textarea class="textarea has-fixed-size" placeholder="Пожалуйста, выберите юнит для начала работы" readonly></textarea> -->
+          </div>
+        </div>
+
+        <div class="box"> <!-- действия для фильтрации, выбор фильтров для отображения и кнопка "Показать" -->
+          <h1 class="title is-6">Действия:</h1>
+          <label class="checkbox">
+            <input type="checkbox"> Связи с лейблами
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox"> Связи с артистами
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox"> Связи с релизами
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox"> Связи с мейджорами
+          </label>
+
+          <button class="button my-3 is-fullwidth is-primary" type="button" name="button"> Показать </button>
+          <button class="button my-3 is-fullwidth is-primary" type="button" name="testButton" id="testButton" onclick="drawShit()"> тест </button>
+        </div>
+
+      </div>
+
+      <div class="column is-one-fifth"> <!-- Колонка релизов -->
+        <div class="box">
+          <h1 class="title is-5">Linked Releases</h1>
+        </div>
+
+        <div class="card my-3">
+          <header class="card-header">
+            <p class="card-header-title">Трилогия воды</p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <p>
+                <i>Артист:</i> gurtle <br>
+                <i>Тип релиза:</i> LP <br>
+                <i>Количество треков:</i> 14 <br>
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="card my-3">
+          <header class="card-header">
+            <p class="card-header-title">POWERSHELL</p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <p>
+                <i>Артист:</i> data drain <br>
+                <i>Тип релиза:</i> LP <br>
+                <i>Количество треков:</i> 10 <br>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="column">              <!-- Колонка артистов -->
+        <div class="box">
+          <h1 class="title is-5">Linked Artists</h1>
+        </div>
+
+        <div class="card my-3">
+          <header class="card-header">
+            <p class="card-header-title">data drain</p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <p>
+                <i>ФИО:</i> Филатов Артём Константинович <br>
+                <i>Количество релизов:</i> 6 <br>
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="card my-3">
+          <header class="card-header">
+            <p class="card-header-title">gurtle</p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <p>
+                <i>ФИО:</i> Логвинов Вадим Николаевич <br>
+                <i>Количество релизов:</i> 4 <br>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="column">              <!-- Колонка лейблов -->
+        <div class="box">
+          <h1 class="title is-5">Linked Labels</h1>
+        </div>
+
+        <div class="card my-3">
+          <header class="card-header">
+            <p class="card-header-title">Hyperboloid Records</p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <p>
+                <i>Связанные артисты:</i> 20 <br>
+                <i>Жанр:</i> IDM, Bass <br>
+                <i>Количество релизов:</i> 90 <br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card my-3">
+          <header class="card-header">
+            <p class="card-header-title">RESEARCHCORE</p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <p>
+                <i>Связанные артисты:</i> 20 <br>
+                <i>Жанр:</i> IDM, Bass <br>
+                <i>Количество релизов:</i> 90 <br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">              <!-- Колонка мейджоров -->
+        <div class="box">
+          <h1 class="title is-5">Linked Majors</h1>
+        </div>
+
+        <div class="card my-3">
+          <header class="card-header">
+            <p class="card-header-title">Universal Music Group</p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <p>
+                <i>Подлейблы:</i> 456 <br>
+                <i>Связанные артисты:</i> 3056 <br>
+                <i>Количество релизов:</i> ??? <br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      require('./render.js');
+    </script>
+  </body>
+</html>
